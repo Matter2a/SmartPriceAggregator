@@ -5,7 +5,7 @@ description = "project"
 authors = [
     {name = "Matter2a",email = "jkl_studio@mail.ru"}
 ]
-requires-python = ">=3.13"
+requires-python = ">=3.13,<4.0"
 dependencies = [
     "fastapi (>=0.129.0,<0.130.0)",
     "uvicorn[standard] (>=0.40.0,<0.41.0)",
@@ -16,7 +16,8 @@ dependencies = [
     "pydantic-settings (>=2.12.0,<3.0.0)",
     "alembic (>=1.18.4,<2.0.0)",
     "psycopg2-binary (>=2.9.11,<3.0.0)",
-    "playwright (>=1.58.0,<2.0.0)"
+    "playwright (>=1.58.0,<2.0.0)",
+    "loguru (>=0.7.3,<0.8.0)"
 ]
 
 
