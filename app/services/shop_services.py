@@ -1,5 +1,5 @@
 from sqlalchemy import select
-from sqlaclchemy.ext.asyncio import AsyncSession
+from sqlalchemy.ext.asyncio import AsyncSession
 from models.shop import Shop
 
 async def get_or_create_shop(
