@@ -59,3 +59,5 @@ async def parse_petshop():
         "saved": saved_count,
         "shop_id": shop_id,
     }
+
+# Сделать модель нормализовать данные начиная с text.py заканчиваю weight.py и залить в бд
