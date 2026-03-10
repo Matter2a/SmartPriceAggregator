@@ -6,7 +6,7 @@ from services.aggregation import AggregationService
 from services.shop_services import get_or_create_shop
 
 from core.logger import logger
-
+from services.normalization_services import NormalizationService
 import time
 app = FastAPI(title="Smart Price Aggregator")
 
@@ -59,5 +59,10 @@ async def parse_petshop():
         "saved": saved_count,
         "shop_id": shop_id,
     }
-
+@app.post("/normalize")
+async def normalize_products():
+    async with AsyncSessionLocal() as session:
+        service = NormalizationService()
+        await service.run(session)
+    return {"status": "ok"}
 # Сделать модель нормализовать данные начиная с text.py заканчиваю weight.py и залить в бд

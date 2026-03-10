@@ -42,10 +42,10 @@ def normalize_brand(brand: Optional[str]) -> str:
     
     # Можно добавить словарь замен по мере накопления
     brand_map = {
-        'florida vet': 'florida vet',
-        'royal canin': 'royalcanin',
-        '4 лапы': '4lapy',
-
+    'royal canin': 'royalcanin',
+    'royalcanin': 'royalcanin',
+    '4 лапы': '4lapy',
+    '4lapy': '4lapy',
     }
     return brand_map.get(brand, brand)
 
